@@ -399,18 +399,6 @@ This project is built to demonstrate the four fundamental HTTP methods used in R
 
 ---
 
-## Known Limitations
-
-These are areas where the current implementation can be improved, especially when scaling beyond a learning project:
-
-- **No persistent storage** — All data lives in a Python dictionary and is lost when the server stops. A database (e.g., SQLite, PostgreSQL) should be integrated for production use.
-- **Search only checks first record** — The `/get-by-name` endpoint returns early on the first iteration, meaning only the first parent in the dictionary is ever checked. This is a logic bug that should be fixed with a proper loop.
-- **No authentication or authorization** — Any user can create, update, or delete records without any access control.
-- **ID constraint only on one endpoint** — The `gt=100, lt=200` path constraint is only enforced on the GET-by-ID route, not on POST, PUT, or DELETE.
-- **Inconsistent field casing** — The pre-loaded data uses `"Relationship"` (capitalized) for ID 101 but `"relationship"` (lowercase) for IDs 102 and 103. This may cause unexpected behavior on PUT updates.
-- **No HTTP status codes** — Errors return `200 OK` with an error message body instead of using proper status codes like `404 Not Found` or `409 Conflict`.
-
----
 
 ## License
 
