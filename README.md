@@ -23,7 +23,6 @@ A beginner-friendly RESTful API built with **FastAPI** and **Python** that demon
 - [Data Models](#data-models)
 - [Sample Data](#sample-data)
 - [HTTP Methods Explained](#http-methods-explained)
-- [Known Limitations](#known-limitations)
 - [License](#license)
 
 ---
